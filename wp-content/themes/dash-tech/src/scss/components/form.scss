@@ -1,0 +1,74 @@
+body .gform_wrapper ul li.gfield {
+  padding: 0 !important;
+  margin: 0 0 14px 0 !important;
+}
+
+body .gform_wrapper .top_label div.ginput_container,
+.gform_wrapper li.hidden_label input,
+.gform_footer.top_label {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.gform_wrapper .gform_footer input.button, .gform_wrapper, .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
+  margin: 0 !important;
+}
+
+.gform_footer.top_label {
+  margin-top: 25px !important;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gform_wrapper textarea, .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+  padding: 14px 16px !important;
+  font-size: 16px !important;
+  color: $white;
+  background-color: #4e4d4d;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+
+  @media (max-width: $sm) {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.gform_wrapper textarea.large {
+  height: 272px !important;
+
+  @media (max-width: $md) {
+    height: 200px !important;
+  }
+
+  @media (max-width: $sm) {
+    height: 150px !important;
+  }
+}
+
+.ginput_container_select select {
+  border-radius: 10px;
+  height: 45px;
+  border: 1px solid #9d9d9c;
+  padding: 11px 16px !important;
+  color: #646363;
+  font-size: 16px !important;
+  background-image: url("../img/select-icon.png");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 96.5% center;
+  appearance: none;
+  outline: none;
+
+  @media (max-width: $sm) {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    background-size: 15px;
+  }
+}

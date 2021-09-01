@@ -1,0 +1,137 @@
+@import '../../src/scss/components/vars';
+
+.why-choose-dash {
+  padding: 52px 0 57px;
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  .title-holder {
+    text-align: center;
+
+    h2 {
+      margin: 0;
+      text-transform: uppercase;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .blocks-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 63px -35px 0;
+    max-width: 1400px;
+
+    @media (max-width: $lg) {
+      margin: 40px -35px 0;
+    }
+
+    @media (max-width: $sm) {
+      margin: 40px 0 0;
+    }
+
+    .block {
+      width: 33.33%;
+      max-width: 350px;
+      text-align: center;
+      margin: 0 24px 23px;
+
+      @media (max-width: $sm) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 30px 0;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+
+      .icon-holder {
+        max-width: 65px;
+        height: 65px;
+        margin: 0 auto 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $sm) {
+          margin: 0 auto 20px;
+          max-width: 50px;
+          height: 50px;
+        }
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      h4 {
+        margin: 0 0 1px 0;
+      }
+
+      .description {
+        font-size: 18px;
+        line-height: 28px;
+        color: $white;
+
+        @media (max-width: $lg) {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+
+body.page-template-default:not(.home) {
+  .why-choose-dash {
+    padding: 80px 0 75px;
+    background-color: #fafafa;
+    color: $black;
+
+    @media (max-width: $md) {
+      padding: 60px 0;
+    }
+
+    @media (max-width: $sm) {
+      padding: 40px 0;
+    }
+
+    .title-holder {
+      h2 {
+        color: $black;
+        background: none;
+
+        strong {
+          color: $black;
+          background: none;
+          -webkit-text-fill-color: $black;
+        }
+      }
+    }
+
+    .blocks-holder {
+      .block {
+        margin: 0 35px 50px;
+
+        @media (max-width: $sm) {
+          margin: 0 0 30px 0;
+
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+
+        .description {
+          color: $black;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: 400;
+  color: $white;
+  background-color: $semi-black;
+  display: flex;
+  height: auto;
+  margin: 0;
+
+  &.opened-modal {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .footer {
+    margin-top: auto;
+  }
+}
+
+.container {
+  box-sizing: content-box;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  transition: color $transition;
+}
+
+.gold-gradient, .custom-gold-gradient strong {
+  background: linear-gradient(to right, #947430 2%, #f1bc57 58%, #f7d89f 73%, #f1bb54 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #947430;
+}
+
+.custom-gold-gradient p {
+  margin: 0;
+}
+
+.grey-gradient-bg {
+  background-image: url("../img/grey-gradient.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-bottom: 47px;
+
+  @media (max-width: $lg) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: $md) {
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: $sm) {
+    padding-bottom: 40px;
+  }
+
+  .timeline-section {
+    margin-top: 15px;
+  }
+}
+
+.image-bg-wrapper {
+  padding-top: 53px;
+  background-image: url("../img/who-we-serve-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+
+  @media (max-width: $lg) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: $md) {
+    padding-top: 10px;
+  }
+
+  @media (max-width: $sm) {
+    padding-top: 0;
+  }
+}
+
+/* SLICK SLIDER */
+.slick-slide {
+  outline: none;
+}
+
+.next-slick-arrow, .prev-slick-arrow {
+  width: 38px;
+  height: 38px;
+  background: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+
+  @media (max-width: $lg) {
+    width: 33px;
+    height: 33px;
+  }
+
+  @media (max-width: $md) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (max-width: $sm) {
+    width: 25px;
+    height: 25px;
+  }
+
+  &:hover svg {
+    fill: $gold;
+  }
+
+  &.slick-disabled {
+    cursor: auto;
+
+    &:hover svg {
+      fill: #666565;
+    }
+
+    svg {
+      fill: #666565;
+    }
+  }
+
+  svg {
+    display: block;
+    width: 38px;
+    height: 38px;
+    fill: $white;
+    transition: fill $transition;
+
+    @media (max-width: $lg) {
+      width: 33px;
+      height: 33px;
+    }
+
+    @media (max-width: $md) {
+      width: 28px;
+      height: 28px;
+    }
+
+    @media (max-width: $sm) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.slick-dots {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    cursor: pointer;
+    list-style-type: none;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(84,86,90,0.35);
+    transition: background-color $transition;
+    margin: 0 7px;
+
+    @media (max-width: $md) {
+      width: 10px;
+      height: 10px;
+    }
+
+    &.slick-active, &:hover {
+      background-color: rgb(84,86,90);
+    }
+
+    button {
+      font-size: 0;
+    }
+  }
+}
+
+/* STYLES FOR WP CONTENT */
+.page-content {
+  clear: both;
+
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.alignright {
+  text-align: right;
+}
+
+img.alignleft, .wp-caption.alignleft {
+  float: left;
+  margin-right: 15px;
+}
+
+img.alignright, .wp-caption.alignright {
+  float: right;
+  margin-left: 15px;
+}
+
+.wp-caption {
+  max-width: 100%;
+
+  &.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.wp-caption-text {
+  font-family: $font-family-base;
+  font-size: 18px;
+}
+
+@media (max-width: $sm) {
+  img.alignleft, .wp-caption.alignleft {
+    float: none;
+    margin-right: 0;
+  }
+  img.alignright, .wp-caption.alignright {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+/* END STYLES FOR WP CONTENT */

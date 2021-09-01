@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$montserrat: 'Montserrat', sans-serif;
+
+$xs: 330px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// FONTS
+$font-size-base: 18px;
+$font-family-base: $montserrat;
+
+//COLORS
+$white: #fff;
+$black: #000;
+$semi-black: #020304;
+$gold: #947430;
+$light-gold: rgb(247, 216, 159);
+$red: #e43431;
+
+//BASE
+$transition: 0.15s;

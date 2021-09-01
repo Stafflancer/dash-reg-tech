@@ -1,0 +1,84 @@
+@import '../../src/scss/components/vars';
+
+.form-block {
+  padding: 72px 0 61px;
+  background-color: $white;
+
+  @media (max-width: $md) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  form {
+    max-width: 1032px;
+    margin: 0 auto;
+
+    ul {
+      li.gfield {
+        clear: none !important;
+        width: calc(50% - 15px);
+        float: left;
+        margin: 0 0 31px 0 !important;
+
+        @media (max-width: $lg) {
+          margin-bottom: 20px !important;
+          width: calc(50% - 10px);
+        }
+
+        @media (max-width: $md) {
+          margin-bottom: 14px !important;
+          width: 100%;
+          float: none;
+        }
+
+        &:nth-child(even) {
+          float: right;
+
+          @media (max-width: $md) {
+            float: none;
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 32px !important;
+
+          @media (max-width: $lg) {
+            margin-bottom: 30px !important;
+          }
+
+          @media (max-width: $md) {
+            margin-bottom: 20px !important;
+          }
+        }
+
+        select, textarea, input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+          background-color: #f6f6f6;
+          border: 1px solid #9d9d9c !important;
+          color: #646363;
+
+          &::placeholder {
+            color: #646363;
+          }
+        }
+      }
+    }
+
+    .gform_footer {
+      justify-content: center;
+
+      input[type="submit"] {
+        background-color: $red;
+        border: 0;
+        padding: 13px 22px !important;
+        min-width: 172px;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}

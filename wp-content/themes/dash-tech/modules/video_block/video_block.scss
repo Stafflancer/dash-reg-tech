@@ -1,0 +1,190 @@
+@import '../../src/scss/components/vars';
+
+.video-block {
+  position: relative;
+  padding: 111px 0 95px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $lg) {
+    padding: 100px 0 80px;
+  }
+
+  @media (max-width: $md) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  &::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(to right, #000 45%, rgba(0,0,0,0) 100%);
+
+    @media (max-width: $md) {
+      background: linear-gradient(to right, #000 70%, rgba(0,0,0,0) 100%);
+    }
+  }
+
+  .holder {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+  }
+
+  .text-col {
+    max-width: 610px;
+    position: relative;
+    z-index: 2;
+    padding-left: 43px;
+
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+
+      @media (max-width: $lg) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .gold-border-btn {
+      display: inline-block;
+      margin-top: 16px;
+    }
+  }
+
+  .video-col {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 20px;
+
+    @media (max-width: $md) {
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .open-video-popup-btn {
+      background: none;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 2px solid $gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color $transition;
+      margin-top: -15px;
+      margin-right: -25px;
+
+      @media (max-width: $lg) {
+        margin-top: 0;
+        margin-right: 0;
+        width: 85px;
+        height: 85px;
+      }
+
+      &:hover {
+        border-color: $white;
+      }
+
+      svg {
+        width: 36px;
+        height: 42px;
+        fill: $white;
+        margin-right: -5px;
+
+        @media (max-width: $lg) {
+          width: 30px;
+          height: 36px;
+        }
+      }
+    }
+  }
+
+  .video-popup {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.8);
+
+    .container {
+      height: 100%;
+    }
+
+    .popup-holder {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .close-video-popup-btn {
+      position: absolute;
+      z-index: 1;
+      top: 13px;
+      right: 0;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba($white, 0.149);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover svg {
+        opacity: 0.6;
+      }
+
+      svg {
+        display: block;
+        width: 14px;
+        height: 14px;
+        opacity: 0.4;
+        transition: opacity $transition;
+      }
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 500px;
+
+      @media (max-width: $md) {
+        height: 400px;
+      }
+
+      @media (max-width: $sm) {
+        height: 250px;
+      }
+    }
+  }
+}

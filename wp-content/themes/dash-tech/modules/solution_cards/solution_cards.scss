@@ -1,0 +1,159 @@
+@import '../../src/scss/components/vars';
+
+.solution-cards {
+  padding: 110px 0 60px;
+
+  @media (max-width: $lg) {
+    padding: 80px 0 60px;
+  }
+
+  @media (max-width: $md) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  .text-holder {
+    max-width: 615px;
+    padding-left: 42px;
+
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+
+      @media (max-width: $sm) {
+        line-height: 26px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .cards-holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 42px -8px 0;
+    padding-left: 42px;
+
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+
+    .card-holder {
+      padding: 0 8px 8px;
+      width: 32.7%;
+
+      @media (max-width: $lg) {
+        max-width: 50%;
+        width: 50%;
+      }
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .card {
+        border: 1px solid rgba($white, 0.22);
+        border-radius: 9px;
+        padding: 40px 42px 42px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $lg) {
+          padding: 35px 30px;
+        }
+
+        @media (max-width: $md) {
+          padding: 25px 20px;
+        }
+
+        &.grey {
+          background-color: #424140;
+          border-color: rgba(0, 0, 0, 0);
+
+          .gold-border-btn {
+            border-color: $white;
+
+            &:hover {
+              border-color: $gold;
+            }
+          }
+        }
+
+        .title-holder {
+          display: flex;
+          align-items: center;
+
+          svg {
+            fill: $gold;
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+          }
+        }
+
+        h4 {
+          margin: 0;
+        }
+
+        .content {
+          margin-top: 17px;
+          color: $white;
+
+          p {
+            color: $white;
+            margin: 0 0 14px 0;
+            line-height: 28px;
+            font-size: 18px;
+
+            @media (max-width: $sm) {
+              line-height: 26px;
+              font-size: 16px;
+            }
+          }
+        }
+
+        .button-holder {
+          margin-top: auto;
+          padding-top: 38px;
+
+          @media (max-width: $lg) {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.page-template-default:not(.home) {
+  .solution-cards {
+    background-image: url("../../../img/grey-gradient-2.png");
+    background-size: cover;
+    padding: 110px 0;
+
+    @media (max-width: $lg) {
+      padding: 80px 0;
+    }
+
+    @media (max-width: $md) {
+      padding: 60px 0;
+    }
+
+    @media (max-width: $sm) {
+      padding: 40px 0;
+    }
+  }
+}

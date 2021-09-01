@@ -1,0 +1,201 @@
+@import '../../src/scss/components/vars';
+
+.who-we-serve {
+  padding: 124px 0 40px;
+
+  @media (max-width: $lg) {
+    padding: 80px 0 40px;
+  }
+
+  @media (max-width: $md) {
+    padding: 60px 0 40px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  .title-holder {
+    text-align: center;
+    max-width: 670px;
+    margin: 0 auto;
+
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 4px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .subtitle {
+      font-size: 18px;
+      line-height: 28px;
+
+      @media (max-width: $sm) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .holder {
+    display: flex;
+    align-items: center;
+    max-width: 1035px;
+    margin: 25px auto 0;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $sm) {
+      margin: 20px auto 0;
+    }
+
+    .image {
+      img {
+        display: block;
+        min-width: 555px;
+
+        @media (max-width: $lg) {
+          min-width: 0;
+        }
+      }
+    }
+
+    .content {
+      margin-left: 33px;
+      font-size: 18px;
+      line-height: 32px;
+      color: $white;
+      font-weight: bold;
+      margin-top: -22px;
+
+      @media (max-width: $lg) {
+        margin-left: 40px;
+      }
+
+      @media (max-width: $md) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+
+      @media (max-width: $sm) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      .item {
+        position: relative;
+        margin-bottom: 15px;
+
+        @media (max-width: $md) {
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: $sm) {
+          margin-bottom: 5px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 12px;
+          left: -16px;
+          width: 6px;
+          height: 6px;
+          background-color: rgb(237, 51, 38);
+          border-radius: 50%;
+
+          @media (max-width: $sm) {
+            width: 4px;
+            height: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.page-template-default:not(.home) {
+  .who-we-serve {
+    padding: 108px 0 138px;
+    background-color: #fafafa;
+    color: $black;
+
+    @media (max-width: $lg) {
+      padding: 80px;
+    }
+
+    @media (max-width: $md) {
+      padding: 60px 0;
+    }
+
+    @media (max-width: $sm) {
+      padding: 40px 0;
+    }
+
+    .title-holder {
+      max-width: 100%;
+
+      h2 {
+        color: $red;
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 17px;
+
+        @media (max-width: $lg) {
+          font-size: 26px;
+          line-height: 36px;
+        }
+
+        @media (max-width: $md) {
+          font-size: 24px;
+          line-height: 34px;
+        }
+
+        @media (max-width: $sm) {
+          font-size: 22px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    .holder {
+      max-width: 990px;
+      margin-top: 47px;
+
+      .image {
+        width: 100%;
+        max-width: 470px;
+
+        img {
+          display: block;
+          width: 100%;
+          min-width: 0;
+        }
+      }
+
+      .content {
+        margin-left: 92px;
+        color: $black;
+        line-height: 25px;
+
+        @media (max-width: $lg) {
+          margin-left: 40px;
+        }
+
+        @media (max-width: $md) {
+          margin-left: 0;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}

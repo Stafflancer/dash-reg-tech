@@ -1,0 +1,155 @@
+@import '../../src/scss/components/vars';
+
+.single-team-section {
+  padding: 160px 0 170px;
+  background-image: url("../../../img/team-single-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (max-width: $lg) {
+    padding: 140px 0 100px;
+  }
+
+  @media (max-width: $md) {
+    padding: 140px 0 80px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 120px 0 40px;
+  }
+
+  .breadcrumbs {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 45px;
+
+    @media (max-width: $sm) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $xs) {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $light-gold;
+      }
+    }
+  }
+
+  .cols {
+    display: flex;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+
+    .left-col {
+      margin-right: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media (max-width: $lg) {
+        margin-right: 30px;
+      }
+
+      @media (max-width: $md) {
+        margin-right: 0;
+        margin-bottom: 40px;
+        max-width: 217px;
+      }
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+      }
+
+      .thumbnail {
+        min-width: 217px;
+        max-width: 217px;
+
+        @media (max-width: $sm) {
+          min-width: 160px;
+          max-width: 160px;
+        }
+
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .linkedin {
+        margin-top: 25px;
+
+        @media (max-width: $sm) {
+          margin-top: 20px;
+        }
+
+        &:hover svg {
+          fill: $white;
+        }
+
+        svg {
+          fill: #8e8988;
+          width: 20px;
+          transition: fill $transition;
+        }
+      }
+    }
+
+    .content-holder {
+      color: $white;
+      max-width: 745px;
+
+      .title {
+        margin-bottom: 20px;
+        padding-top: 30px;
+
+        @media (max-width: $md) {
+          padding-top: 0;
+        }
+
+        @media (max-width: $sm) {
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          margin: 0;
+          text-transform: uppercase;
+        }
+      }
+
+      .subtitle {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+
+        @media (max-width: $sm) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+
+      .content {
+        margin-top: 45px;
+        font-size: 18px;
+        line-height: 28px;
+
+        @media (max-width: $md) {
+          margin-top: 30px;
+        }
+
+        @media (max-width: $sm) {
+          font-size: 16px;
+          line-height: 26px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

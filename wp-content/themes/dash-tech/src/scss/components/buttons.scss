@@ -1,0 +1,79 @@
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.primary-btn {
+  cursor: pointer;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 20px;
+  font-family: $montserrat;
+  font-weight: bold;
+  padding: 8px 22px;
+  background: linear-gradient(to right, #a52319 2%,#ef3824 100%);
+  transition: color $transition;
+
+  @media (max-width: $sm) {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  &:hover {
+    color: rgba($white, 0.65);
+  }
+}
+
+.secondary-btn {
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 20px;
+  font-family: $montserrat;
+  font-weight: bold;
+  padding: 8px 22px;
+  background: rgba(0,0,0,0);
+  border: 1px solid rgba($white, 0.65);
+  color: rgba($white, 0.65);
+  transition: color $transition, border-color $transition;
+
+  @media (max-width: $sm) {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  &:hover {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.gold-border-btn, .gform_footer input[type="submit"] {
+  display: inline-block;
+  min-height: 0 !important;
+  line-height: 1 !important;
+  cursor: pointer;
+  font-size: 15px !important;
+  border-radius: 20px;
+  font-family: $montserrat;
+  font-weight: bold;
+  padding: 10px 25px !important;
+  background: rgba(0,0,0,0);
+  border: 1px solid $gold;
+  color: $white;
+  transition: color $transition, border-color $transition;
+  text-transform: uppercase;
+
+  @media (max-width: $sm) {
+    font-size: 14px !important;
+    padding: 8px 15px !important;
+  }
+
+  &:hover {
+    color: $white;
+    border-color: $white;
+  }
+}

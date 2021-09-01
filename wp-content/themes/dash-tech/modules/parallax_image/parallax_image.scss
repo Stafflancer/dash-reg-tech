@@ -1,0 +1,37 @@
+@import '../../src/scss/components/vars';
+
+.parallax-image {
+  padding: 110px 0;
+  text-align: center;
+
+  @media (max-width: $lg) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: $md) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  .title-holder {
+    text-align: center;
+    margin-bottom: 35px;
+
+    h2 {
+      text-transform: uppercase;
+      margin: 0;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}

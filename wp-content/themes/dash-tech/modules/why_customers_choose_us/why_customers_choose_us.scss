@@ -1,0 +1,97 @@
+@import '../../src/scss/components/vars';
+
+.why-customers-choose-us {
+  padding: 110px 0 150px;
+  color: $black;
+  background-color: $white;
+
+  @media (max-width: $lg) {
+    padding: 100px 0;
+  }
+
+  @media (max-width: $md) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 60px 0;
+  }
+
+  .title-holder {
+    margin-bottom: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: $sm) {
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 38px;
+
+      @media (max-width: $lg) {
+        font-size: 26px;
+        line-height: 36px;
+      }
+
+      @media (max-width: $md) {
+        font-size: 24px;
+        line-height: 34px;
+      }
+
+      @media (max-width: $sm) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .blocks-holder {
+    max-width: 580px;
+    margin: 0 auto;
+
+    .block {
+      text-align: center;
+      margin-bottom: 60px;
+
+      @media (max-width: $md) {
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: $sm) {
+        margin-bottom: 20px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .icon {
+        width: 45px;
+        margin: 0 auto 10px;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      h5 {
+        text-transform: uppercase;
+        margin: 0 0 2px 0;
+      }
+
+      .description {
+        font-size: 18px;
+        line-height: 28px;
+
+        @media (max-width: $sm) {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}

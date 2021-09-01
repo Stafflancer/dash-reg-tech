@@ -1,0 +1,165 @@
+.footer {
+  padding: 60px 0 90px;
+
+  @media (max-width: $lg) {
+    padding: 40px 0 80px;
+  }
+
+  @media (max-width: $md) {
+    padding: 40px 0 60px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  .top-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (max-width: $md) {
+        margin-top: 10px;
+      }
+
+      a {
+        margin-right: 14px;
+        transition: opacity $transition;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        img, svg {
+          width: 100%;
+          max-width: 18px;
+          max-height: 16px;
+        }
+      }
+    }
+  }
+
+  .menu-holder {
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      font-size: 15px;
+      font-weight: bold;
+      flex-wrap: wrap;
+
+      @media (max-width: $sm) {
+        flex-direction: column;
+      }
+
+      li {
+        list-style-type: none;
+        margin-right: 35px;
+
+        @media (max-width: $sm) {
+          margin: 10px 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        a {
+          color: rgba($white, 0.65);
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .below-menu-text {
+    font-size: 15px;
+    line-height: 21px;
+    color: rgba($white, 0.65);
+    margin-top: 11px;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: rgba($white, 0.65);
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  .logo {
+    max-width: 121px;
+    margin-top: 45px;
+    display: inline-block;
+    margin-right: 40px;
+
+    @media (max-width: $sm) {
+      max-width: 100px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  .bottom-block {
+    margin-top: 18px;
+    color: rgba($white, 0.65);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 14px;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .below-logo-text {
+      max-width: 510px;
+
+      p {
+        margin: 0;
+        line-height: 1.5;
+
+        strong {
+          text-transform: uppercase;
+          margin-bottom: 5px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .footer-copyrights {
+      max-width: 510px;
+      text-align: right;
+      line-height: 1.8;
+      margin-bottom: -8px;
+
+      @media (max-width: $lg) {
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
