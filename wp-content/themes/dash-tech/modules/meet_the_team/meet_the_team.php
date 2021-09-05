@@ -2,6 +2,7 @@
 $meet_the_team_title = get_sub_field('meet_the_team_title');
 $meet_the_team_subtitle = get_sub_field('meet_the_team_subtitle');
 $meet_the_team_logo = get_sub_field('meet_the_team_logo');
+$meet_the_team_video = get_sub_field('meet_the_team_video');
 $meet_the_team_teammates = get_sub_field('meet_the_team_teammates');
 
 if ($meet_the_team_title || $meet_the_team_subtitle || $meet_the_team_logo || !empty($meet_the_team_teammates)) {
@@ -26,7 +27,13 @@ if ($meet_the_team_title || $meet_the_team_subtitle || $meet_the_team_logo || !e
                 <?php }
                 if ($meet_the_team_logo) { ?>
                     <div class="logo-holder">
-                        <?php echo wp_get_attachment_image($meet_the_team_logo, 'wp_lg'); ?>
+                        <?php
+                            if ($meet_the_team_video) {
+                                echo '<iframe src="' . $meet_the_team_video . '" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="width: 100%; min-height: 530px;" allowfullscreen></iframe>';
+                            } else {
+                                echo wp_get_attachment_image($meet_the_team_logo, 'wp_lg');
+                            }
+                        ?>
                     </div>
                 <?php }
                 if (!empty($meet_the_team_teammates)) { ?>
