@@ -15,9 +15,11 @@ if ($why_choose_dash_title || have_rows('blocks')) {
 
             <?php if (have_rows('blocks')) { ?>
                 <div class="blocks-holder">
-                    <?php while (have_rows('blocks')) {
+                    <?php
+                        $timing_tmp = 0.25;
+                        while (have_rows('blocks')) {
                         the_row(); ?>
-                        <div class="block">
+                        <div class="block wow fadeInUp animated" data-wow-delay="<?php echo $timing_tmp; $timing_tmp += 0.1; ?>s">
                             <?php
                             $icon = get_sub_field('icon');
                             $title = get_sub_field('title');
