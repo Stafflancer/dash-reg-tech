@@ -18,7 +18,7 @@ if ($why_customers_choose_us_title || have_rows('why_customers_choose_us_blocks'
                     <div class="blocks-holder">
                         <?php while (have_rows('why_customers_choose_us_blocks')) {
                             the_row(); ?>
-                            <div class="block">
+                            <div class="block wow fadeInUp animated">
                                 <?php
                                 $title = get_sub_field('title');
                                 $description = get_sub_field('description'); ?>
