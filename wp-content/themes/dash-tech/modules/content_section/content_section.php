@@ -11,12 +11,12 @@
 
                     <div class="block">
                         <?php if ($title) { ?>
-                            <h4 class="title">
+                            <h4 class="title wow fadeInUp animated">
                                 <?php echo $title; ?>
                             </h4>
                         <?php }
                         if ($left_col_content || $right_col_content) { ?>
-                            <div class="cols">
+                            <div class="cols wow fadeInUp animated">
                                 <?php if ($left_col_content) { ?>
                                     <div class="col">
                                         <?php echo $left_col_content; ?>
