@@ -25,11 +25,56 @@
             echo ' | ' . sprintf(__('Page %s', 'dash-tech'), max($paged, $page));
         ?>
     </title>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/anim/animate1.css">
     <?php wp_head() ?>
+    <style>
+        #input_1_1:focus, #input_1_6:focus, #input_1_4:focus, #input_1_8:focus, #input_2_1:focus, 
+        #input_3_2:focus, #input_3_3:focus, #input_3_5:focus, #input_3_6:focus, #input_3_7:focus, #input_3_9:focus, #input_3_10:focus,
+        #input_4_2:focus:focus, #input_4_3:focus, #input_4_5:focus, #input_4_6:focus, #input_4_7:focus, #input_4_9:focus,
+        #input_5_2:focus, #input_5_3:focus, #input_5_5:focus, #input_5_6:focus, #input_5_7:focus, #input_5_9:focus, #input_5_10:focus {
+            border: 1px solid #ec3723 !important;
+            outline: none !important;
+        }
+
+        #g_preloader {
+            position: fixed;
+            display: block;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100vh;
+            background: #413e3d;
+            opacity: 1;
+            transition: .35s;
+            z-index: 9999999;
+        }
+        #g_preloader.ok {
+            opacity: 0;
+            transition: .35s;
+        }
+
+        .three {
+          width: 50px;
+          height: 50px;
+          margin: 280px auto;
+          border-radius: 50%;
+          border-top: 2px solid #ec3723;
+          border-right: 2px solid transparent;
+          animation: anim3 .7s linear infinite;
+        }
+
+        @keyframes anim3 {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+    </style>
 </head>
 
 <body <?php body_class() ?>>
 <?php wp_body_open() ?>
+
+<div id="g_preloader"><div class="three"></div></div>
 
 <div class="wrapper">
     <header class="header">
