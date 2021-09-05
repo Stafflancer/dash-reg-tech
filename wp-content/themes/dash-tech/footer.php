@@ -31,12 +31,6 @@
                     </div>
                 <?php endif; ?>
             </div>
-        <?php } ?>
-        <?php $footer_below_menu_text = get_field('footer_below_menu_text', 'option');
-        if ($footer_below_menu_text) { ?>
-            <div class="below-menu-text">
-                <?php echo $footer_below_menu_text; ?>
-            </div>
         <?php }
         $footer_logo = get_field('footer_logo', 'option');
         if ($footer_logo) { ?>
@@ -63,6 +57,22 @@
         <?php } ?>
     </div>
 </footer>
+
+<script src="<?php echo get_template_directory_uri(); ?>/anim/wow.js"></script>
+<script>
+new WOW().init();
+
+// hide preloader screen
+jQuery(window).load(function () {
+    jQuery("#g_preloader").addClass("ok");
+
+    setTimeout(function () {
+        jQuery("#g_preloader").hide();
+    }, 450);
+
+});
+</script>
+
 <?php wp_footer() ?>
 </div><!-- .wrapper -->
 </body>
