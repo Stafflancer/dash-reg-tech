@@ -10,19 +10,19 @@ if ($hero_title || $hero_description || $hero_image) {
         <div class="container">
             <div class="holder">
                 <?php if ($hero_title || $hero_description) { ?>
-                    <div class="text-col">
+                    <div class="text-col wow fadeIn animated">
                         <?php if ($hero_above_title_text) { ?>
                             <div class="hero-above-title-text">
                                 <?php echo $hero_above_title_text; ?>
                             </div>
                         <?php }
                         if ($hero_title) { ?>
-                            <h1 class="custom-gold-gradient">
+                            <h1 class="custom-gold-gradient wow fadeIn animated">
                                 <?php echo $hero_title; ?>
                             </h1>
                         <?php }
                         if ($hero_description) { ?>
-                            <div class="description">
+                            <div class="description wow fadeIn animated">
                                 <?php echo $hero_description; ?>
                             </div>
                         <?php } ?>
