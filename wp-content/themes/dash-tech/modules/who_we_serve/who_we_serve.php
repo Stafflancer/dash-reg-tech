@@ -23,7 +23,7 @@ if ($who_we_serve_title || $who_we_serve_subtitle || $who_we_serve_image || have
             if ($who_we_serve_image || have_rows('who_we_serve_content')) { ?>
                 <div class="holder">
                     <?php if ($who_we_serve_image) { ?>
-                        <div class="image">
+                        <div class="image wow fadeInLeft animated" data-wow-delay="0.4s">
                             <?php echo wp_get_attachment_image($who_we_serve_image, 'wp_sm'); ?>
                         </div>
                     <?php }
